@@ -1,0 +1,141 @@
+:root{
+    --jwe-saffron: #FFE601;
+    --jwe-titanium-white: #FFFFFF;
+    --jwe-black: #000000;
+    --jwe-black-light: #555555;
+    --jwe-lilac: #DEDBFF;
+    --jwe-secondary: #F63871;
+    --jwe-off-white: #FAFAFA;
+}
+
+.review-page-wrapper {
+    background-color: var(--jwe-off-white);
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+.review-title-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.review-title {
+    font-size: 300%;
+    margin: 1% 0 0 0;
+}
+
+.review-subtitle {
+    color: var(--jwe-secondary);
+    font-size: larger;
+    margin: 0;
+}
+
+.review-spacer {
+    color: transparent;
+    background-color: var(--jwe-black);
+    height: 2px;
+    padding: 0;
+    margin: 2% 5% 1% 5%;
+}
+
+
+.tabs-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.tab-wrapper {
+    width: 14%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.review-tab {
+    color: var(--jwe-black);
+    background: none;
+    border: none;
+    font-size: larger;
+    margin-top: 10%;
+}
+
+.review-tab:hover{
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.review-tab-bar{
+    color: transparent;
+    background-color: var(--jwe-black);
+    height: 8%;
+    padding: 0;
+}
+
+.active{
+    color: var(--jwe-secondary);
+}
+
+.activeb{
+    background-color: var(--jwe-secondary);
+}
+
+.reviews-container-wrapper {
+    display: flex;
+}
+
+.arrow-wrapper {
+    box-sizing: border-box;
+    width: 7vw;
+    margin: 0;
+    padding: 0%;
+}
+
+.reviews-container {
+    min-width: 88vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    min-height: 55vh;
+}
+
+.review-card {
+    border-radius: 16px;
+    width: 320px;
+    height: 170px;
+    margin: 0.8% 0.5%;
+    background-color: var(--jwe-titanium-white);
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.25);
+}
+
+.review-button-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    height: 8vh;
+}
+
+.review-add {
+    background-color: var(--jwe-black);
+    border: none;
+    width: 18%;
+    margin-right: 2%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    font-weight: bolder;
+    color: var(--jwe-titanium-white);
+}
+
+.review-copyright-bar {
+    width: 100%;
+    height: 3.5vh;
+}
+
+.review-copyright-info {
+    margin: 0;
+}
