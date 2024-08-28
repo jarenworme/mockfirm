@@ -105,13 +105,14 @@
     align-items: center;
     width: 26%;
     height: 21vh;
+    text-decoration: none;
+    color: var(--jwe-black);
 }
 
 .lp-card:hover, .lp-review-card:hover {
-    box-shadow: none;
-    height: 22vh;
-    transition: height 0.3s ease;
+    box-shadow: 5px 5px var(--jwe-saffron);
     cursor: pointer;
+    transition: box-shadow 0.5s ease;
 }
 
 .lp-review-card {

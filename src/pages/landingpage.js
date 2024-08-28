@@ -10,7 +10,9 @@ export default function LandingPage () {
     const navigate = useNavigate();
 
     const navigateHome = () => navigate('/', {replace: false});
-    const emailQuestions = () => {};
+
+    const emailString = "mailto:jarenworme@gmail.com?subject=JWElectrical?body=Hi%20Jaren,%0D%0A%0D%0AI%20would%20like%20to%20ask%20a%20query%20about%20your%20services!%0D%0A%0D%0A"
+
     const routeReviews = () => navigate('/reviews', { replace: false });
     const routeMoreInfo = () => navigate('/moreinfo', { replace: false });
 
@@ -53,10 +55,10 @@ export default function LandingPage () {
                     </div>
                     <h1 className="lp-card-text-review">Reviews</h1>
                 </button>
-                <button className="lp-card" onClick={emailQuestions}>
+                <a className="lp-card" href={emailString}>
                     <FontAwesomeIcon icon={faEnvelope} size="4x" className="lp-envelope"/>
                     <h1 className="lp-card-text">Email us Questions</h1>
-                </button>
+                </a>
                 <button className="lp-card" onClick={routeMoreInfo}>
                     <FontAwesomeIcon icon={faCircleInfo} size="4x" className="lp-info" />
                     <h1 className="lp-card-text">Meet the Team!</h1>
