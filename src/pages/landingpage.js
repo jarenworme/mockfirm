@@ -1,28 +1,67 @@
 import { useNavigate } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircleInfo, faEnvelope, faHouse, faStar, faStarHalf } from "@fortawesome/free-solid-svg-icons";
+import '../styles/nav.css'
+import '../styles/landingPage.css'
 
 export default function LandingPage () {
     const navigate = useNavigate();
 
+    const navigateHome = () => navigate('/', {replace: false});
     const emailQuestions = () => {};
     const routeReviews = () => navigate('/reviews', { replace: false });
     const routeMoreInfo = () => navigate('/moreinfo', { replace: false });
 
 
     return (
-        <div>
-            <h1>logo</h1>
-            <h1>some title</h1>
-            <p>some supporting text</p>
-            <p>a picture</p>
-            <p>horizontal line</p>
-            <h1>help icon</h1>
-            <button onClick={emailQuestions}>email questions</button>
-            <h1>Reviews icon</h1>
-            <button onClick={routeReviews}>reviews</button>
-            <h1>info icon</h1>
-            <button onClick={routeMoreInfo}>more info</button>
+        <div className="lp-wrapper">
+            <div className="nav-bar">
+                <div className="nav-left">
+                    <h1 className="logo1">JW</h1>
+                    <h1 className="logo2">Electrical</h1>
+                </div>
+                <div className="nav-right">
+                    <FontAwesomeIcon icon={faHouse} onClick={navigateHome} className="nav-home" size="xl"/>
+                </div>
+            </div>
+            <div className="lp-top-container">
+                <div className="lp-top-left-wrapper">
+                    <div className="lp-title-box">
+                        <h1 className="lp-title">Your Trusted Source for All Electrical Needs</h1>
+                    </div>
+                    <div className="lp-subtitle-wrapper">
+                        <h3 className="lp-subtitle">From wiring and lighting installations to home automation, JW Electrical has you covered.</h3>
+                    </div>
+                    <button className="lp-book-button">Book a Free Consultation</button>
+                </div>
+                <div className="lp-top-right-wrapper">.</div>
+            </div>
+            <div className="lp-spacer">.</div>
+            <div className="lp-bottom-container">
+                <button className="lp-review-card" onClick={routeReviews}>
+                    <div className="lp-review-wrapper">
+                        <div className="lp-stars-wrapper">
+                            <FontAwesomeIcon icon={faStar} size="3x" className="lp-star"/>
+                            <FontAwesomeIcon icon={faStar} size="3x" className="lp-star"/>
+                            <FontAwesomeIcon icon={faStar} size="3x" className="lp-star"/>
+                            <FontAwesomeIcon icon={faStar} size="3x" className="lp-star"/>
+                            <FontAwesomeIcon icon={faStarHalf} size="3x" className="lp-star"/>
+                        </div>
+                        <h2 className="lp-review-score">4.7/5</h2>
+                    </div>
+                    <h1 className="lp-card-text-review">Reviews</h1>
+                </button>
+                <button className="lp-card" onClick={emailQuestions}>
+                    <FontAwesomeIcon icon={faEnvelope} size="4x" className="lp-envelope"/>
+                    <h1 className="lp-card-text">Email us Questions</h1>
+                </button>
+                <button className="lp-card" onClick={routeMoreInfo}>
+                    <FontAwesomeIcon icon={faCircleInfo} size="4x" className="lp-info" />
+                    <h1 className="lp-card-text">Meet the Team!</h1>
+                </button>
+            </div>
         </div>
     )
 }

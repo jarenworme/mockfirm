@@ -1,0 +1,159 @@
+:root{
+    --jwe-saffron: #FFE601;
+    --jwe-titanium-white: #FFFFFF;
+    --jwe-black: #000000;
+    --jwe-black-light: #555555;
+    --jwe-lilac: #DEDBFF;
+    --jwe-secondary: #F63871;
+    --jwe-off-white: #FAFAFA;
+}
+
+.lp-wrapper {
+    background-color: var(--jwe-lilac);
+}
+
+.lp-top-container {
+    height: 60vh;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.lp-top-left-wrapper {
+    box-sizing: border-box;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.lp-title-box {
+    background-color: var(--jwe-black);
+    box-shadow: -10px -10px var(--jwe-saffron);
+    width: 82%;
+    margin: 5% 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lp-title {
+    color: var(--jwe-titanium-white);
+    margin: 3% 5%;
+    font-size: 280%;
+    font-weight: normal;
+    text-align: left;
+}
+
+.lp-subtitle-wrapper {
+    width: 80%;
+    margin: 1% 0;
+}
+
+.lp-book-button {
+    background-color: var(--jwe-black);
+    color: var(--jwe-titanium-white);
+    border-radius: 16px;
+    width: 65%;
+    border: none;
+    height: 12%;
+    font-size: x-large;
+    margin: 11% 0 0 12%;
+}
+
+.lp-book-button:hover{
+    cursor: pointer;
+    background-color: var(--jwe-black-light);
+}
+
+.lp-subtitle {
+    font-weight: normal;
+    text-align: left;
+    margin: 0;
+}
+
+.lp-top-right-wrapper {
+    box-sizing: border-box;
+    width: 50%;
+}
+
+
+.lp-spacer {
+    background-color: var(--jwe-black);
+    color: transparent;
+    margin: 1vh 5vw -1vh 5vw;
+    height: 0.5vh;
+    box-sizing: border-box;
+    border-radius: 40%;
+}
+
+.lp-bottom-container {
+    height: 31.5vh;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.lp-card, .lp-review-card {
+    border: none;
+    border-radius: 16px;
+    background-color: var(--jwe-titanium-white);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 26%;
+    height: 21vh;
+}
+
+.lp-card:hover, .lp-review-card:hover {
+    box-shadow: none;
+    height: 22vh;
+    transition: height 0.3s ease;
+    cursor: pointer;
+}
+
+.lp-review-card {
+    justify-content: center;
+}
+
+.lp-card {
+    justify-content: space-between;
+}
+
+.lp-stars-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    margin-right: -8%;
+}
+
+.lp-star {
+    color: var(--jwe-saffron);
+}
+
+.lp-review-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.lp-review-score {
+    text-align: right;
+    width: 80%;
+    margin: 1vh;
+}
+
+
+.lp-envelope, .lp-info {
+    margin-top: 5%;
+}
+
+.lp-card-text-review {
+    margin: 0;
+}
+
+.lp-card-text {
+    margin: 0 0 5% 0;
+}

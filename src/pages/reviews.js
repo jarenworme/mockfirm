@@ -4,12 +4,14 @@ import axios from "axios";
 import WEBADDRESS from "../webAddress";
 import '../styles/reviews.css';
 import '../styles/nav.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faArrowLeft, faArrowRight, faHouse, faStar } from "@fortawesome/free-solid-svg-icons";
 
 export default function Reviews () {
     const navigate = useNavigate();
     
     const [reviewArray, setReviewArray] = useState([]);
-    const [currTab, setCurrTab] = useState(0);
+    const [currTab, setCurrTab] = useState(6);
 
     // grab all reviews from api
     useEffect(() => {
@@ -24,7 +26,7 @@ export default function Reviews () {
     }, []);
 
     const switchTab = (tab) => {
-        if(tab == 0) {
+        if(tab == 6) {
             setCurrTab(tab);
             var Addr = WEBADDRESS + 'api/reviews/';
             axios.get(Addr)
@@ -47,6 +49,18 @@ export default function Reviews () {
         }
     }
 
+    const switchTabArrow = (direction) => {
+        if (direction == 'r') {
+            if (currTab > 1) {
+                switchTab(currTab-1);
+            }
+        } else {
+            if (currTab < 6) {
+                switchTab(currTab+1);
+            }
+        }
+    }
+
     const navigateHome = () => navigate('/', {replace: false});
     const navigatePublish = () => navigate('/publishreview', {replace: false});
 
@@ -59,7 +73,7 @@ export default function Reviews () {
                     <h1 className="logo2">Electrical</h1>
                 </div>
                 <div className="nav-right">
-                    <button onClick={navigateHome} className="nav-home">home</button>
+                    <FontAwesomeIcon icon={faHouse} onClick={navigateHome} className="nav-home" size="xl"/>
                 </div>
             </div>
             <div className="review-title-wrapper">
@@ -68,8 +82,8 @@ export default function Reviews () {
             </div>
             <div className="tabs-wrapper">
                 <div className="tab-wrapper">
-                    <button onClick={() => switchTab(0)} className={`review-tab ${currTab === 0 ? 'active' : ''}`}>all</button>
-                    <div className={`review-tab-bar ${currTab === 0 ? 'activeb' : ''}`}>.</div>
+                    <button onClick={() => switchTab(6)} className={`review-tab ${currTab === 6 ? 'active' : ''}`}>all</button>
+                    <div className={`review-tab-bar ${currTab === 6 ? 'activeb' : ''}`}>.</div>
                 </div>
                 <div className="tab-wrapper">
                     <button onClick={() => switchTab(5)} className={`review-tab ${currTab === 5 ? 'active' : ''}`}>5-star</button>
@@ -93,21 +107,35 @@ export default function Reviews () {
                 </div>
             </div>
             <div className="reviews-container-wrapper">
-                <div className="arrow-wrapper">l</div>
+                <div className="arrow-wrapper-left">
+                    <FontAwesomeIcon icon={faArrowLeft} size="2x" className="arrow-left" onClick={() => switchTabArrow('l')}/>
+                </div>
                 <div className="reviews-container">
                     {reviewArray.length == 0 ?
                     <div>
                         <h2>currently no {currTab}-star reviews.</h2>
                     </div>
-                    : reviewArray.map((item, index) => (
+                    : reviewArray.map((item, _) => (
                         <div key={item.id} className="review-card">
-                            <h1>{item.stars}</h1>
-                            <p>{item.content}</p>
-                            <h4>{item.reviewer}</h4>
+                            <div className="review-star-wrapper">
+                                {Array.from({ length: item.stars }).map((_, index) => (
+                                    <div key={index}>
+                                        <FontAwesomeIcon icon={faStar} size="xl" className="review-star"/>
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="review-content-wrapper">
+                                <p className="review-content">{item.content}</p>
+                            </div>
+                            <div className="review-reviewer-wrapper">
+                                <h4 className="review-reviewer">{item.reviewer}</h4>
+                            </div>
                         </div>
                     ))}
                 </div>
-                <div className="arrow-wrapper">r</div>
+                <div className="arrow-wrapper-right">
+                    <FontAwesomeIcon icon={faArrowRight} size="2x" className="arrow-right" onClick={() => switchTabArrow('r')}/>
+                </div>
             </div>
             <div className="review-button-wrapper">
                 <button className="review-add" onClick={navigatePublish}>Add a Review</button>                
