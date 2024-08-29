@@ -7,14 +7,20 @@ import '../styles/nav.css'
 import '../styles/landingPage.css'
 
 export default function LandingPage () {
+    // set up variable for navigation
     const navigate = useNavigate();
 
+    // function to navigate to the home page (landing page)
     const navigateHome = () => navigate('/', {replace: false});
 
+    // mailto string for email questions button
     const emailString = "mailto:jarenworme@gmail.com?subject=JWElectrical%20Query?body=Hi%20Jaren,%0D%0A%0D%0AI%20would%20like%20to%20ask%20a%20question%20about%20your%20services!%0D%0A%0D%0A"
 
+    // function to navigate to the reviews page
     const routeReviews = () => navigate('/reviews', { replace: false });
-    const routeMoreInfo = () => navigate('/moreinfo', { replace: false });
+
+    // function to navigate to the more info page
+    // const routeMoreInfo = () => navigate('/moreinfo', { replace: false });
 
 
     return (

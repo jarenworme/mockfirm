@@ -8,12 +8,16 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowLeft, faArrowRight, faHouse, faStar } from "@fortawesome/free-solid-svg-icons";
 
 export default function Reviews () {
+    // set up variable for navigation
     const navigate = useNavigate();
     
+    // set up state variable to hold all review data as an array of review objects
     const [reviewArray, setReviewArray] = useState([]);
+
+    // set up state variable to hold info on the current review tab to faciliate switching
     const [currTab, setCurrTab] = useState(6);
 
-    // grab all reviews from api
+    // function to grab all reviews from api automatically when the page loads up
     useEffect(() => {
         var Addr = WEBADDRESS + 'api/reviews/';
         axios.get(Addr)
@@ -25,7 +29,9 @@ export default function Reviews () {
             });
     }, []);
 
+    // function to change the review tab and regenerate the array of reviews based on the current tab
     const switchTab = (tab) => {
+        // tab  is all reviews, for simplicity
         if(tab == 6) {
             setCurrTab(tab);
             var Addr = WEBADDRESS + 'api/reviews/';
@@ -49,6 +55,7 @@ export default function Reviews () {
         }
     }
 
+    // logic to call switchTab depending on which arrow direction is pressed
     const switchTabArrow = (direction) => {
         if (direction == 'r') {
             if (currTab > 1) {
@@ -61,7 +68,10 @@ export default function Reviews () {
         }
     }
 
+    // function to navigate back to the home page
     const navigateHome = () => navigate('/', {replace: false});
+
+    // function to navigate to the publish review page
     const navigatePublish = () => navigate('/publishreview', {replace: false});
 
 
@@ -138,7 +148,7 @@ export default function Reviews () {
                 </div>
             </div>
             <div className="review-button-wrapper">
-                <button className="review-add">Add a Review</button>                
+                <button className="review-add" onClick={navigatePublish}>Add a Review</button>                
             </div>
             <div className="review-copyright-bar">
                 <p className="review-copyright-info">&copy; Jaren Worme 2024</p>
