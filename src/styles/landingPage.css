@@ -63,7 +63,9 @@
 
 .lp-book-button:hover{
     cursor: pointer;
-    background-color: var(--jwe-black-light);
+    width: 72%;
+    transition: width 1s ease;
+    color: var(--jwe-saffron);
 }
 
 .lp-subtitle {

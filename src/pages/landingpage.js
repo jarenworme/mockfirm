@@ -11,7 +11,7 @@ export default function LandingPage () {
 
     const navigateHome = () => navigate('/', {replace: false});
 
-    const emailString = "mailto:jarenworme@gmail.com?subject=JWElectrical?body=Hi%20Jaren,%0D%0A%0D%0AI%20would%20like%20to%20ask%20a%20query%20about%20your%20services!%0D%0A%0D%0A"
+    const emailString = "mailto:jarenworme@gmail.com?subject=JWElectrical%20Query?body=Hi%20Jaren,%0D%0A%0D%0AI%20would%20like%20to%20ask%20a%20question%20about%20your%20services!%0D%0A%0D%0A"
 
     const routeReviews = () => navigate('/reviews', { replace: false });
     const routeMoreInfo = () => navigate('/moreinfo', { replace: false });
