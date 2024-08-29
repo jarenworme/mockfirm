@@ -1,0 +1,24 @@
+:root{
+    --jwe-saffron: #FFE601;
+    --jwe-titanium-white: #FFFFFF;
+    --jwe-black: #000000;
+    --jwe-black-light: #555555;
+    --jwe-lilac: #DEDBFF;
+    --jwe-secondary: #F63871;
+    --jwe-off-white: #FAFAFA;
+}
+
+.publish-wrapper {
+    background-color: var(--jwe-lilac);
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+.publish-content-wrapper {
+    height: 92vh;
+    box-sizing: border-box;
+}
+
+.publish-title {
+    margin: 0;
+}

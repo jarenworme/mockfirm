@@ -17,6 +17,9 @@ export default function Reviews () {
     // set up state variable to hold info on the current review tab to faciliate switching
     const [currTab, setCurrTab] = useState(6);
 
+    // function to navigate back to the home page
+    const navigateHome = () => navigate('/', {replace: false});
+
     // function to grab all reviews from api automatically when the page loads up
     useEffect(() => {
         var Addr = WEBADDRESS + 'api/reviews/';
@@ -67,9 +70,6 @@ export default function Reviews () {
             }
         }
     }
-
-    // function to navigate back to the home page
-    const navigateHome = () => navigate('/', {replace: false});
 
     // function to navigate to the publish review page
     const navigatePublish = () => navigate('/publishreview', {replace: false});
