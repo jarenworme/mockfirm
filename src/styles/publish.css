@@ -19,6 +19,67 @@
     box-sizing: border-box;
 }
 
+.publish-title-wrapper {
+    background-color: #FFE601;
+}
+
 .publish-title {
     margin: 0;
+}
+
+.publish-stars-wrapper {
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: #555555;
+    justify-content: center;
+}
+
+.s1:hover, .s1:hover + .s2, .s1:hover ~ .s3, .s1:hover ~ .s4, .s1:hover ~ .s5 {
+    color: var(--jwe-saffron);
+    cursor: pointer;
+}
+
+.s2:hover, .s2:hover ~ .s3, .s2:hover ~ .s4, .s2:hover ~ .s5 {
+    color: var(--jwe-saffron);
+    cursor: pointer;
+}
+
+.s3:hover, .s3:hover ~ .s4, .s3:hover ~ .s5 {
+    color: var(--jwe-saffron);
+    cursor: pointer;
+}
+
+.s4:hover, .s4:hover ~ .s5 {
+    color: var(--jwe-saffron);
+    cursor: pointer;
+}
+
+.s5:hover {
+    color: var(--jwe-saffron);
+    cursor: pointer;
+}
+
+.s1a, .s1a + .s2, .s1a ~ .s3, .s1a ~ .s4, .s1a ~ .s5 {
+    color: var(--jwe-saffron);
+    cursor: pointer;
+}
+
+.s2a, .s2a ~ .s3, .s2a ~ .s4, .s2a ~ .s5 {
+    color: var(--jwe-saffron);
+    cursor: pointer;
+}
+
+.s3a, .s3a ~ .s4, .s3a ~ .s5 {
+    color: var(--jwe-saffron);
+    cursor: pointer;
+}
+
+.s4a, .s4a ~ .s5 {
+    color: var(--jwe-saffron);
+    cursor: pointer;
+}
+
+.s5a {
+    color: var(--jwe-saffron);
+    cursor: pointer;
 }

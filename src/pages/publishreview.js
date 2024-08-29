@@ -60,17 +60,17 @@ export default function PublishReview () {
                     <FontAwesomeIcon icon={faHouse} onClick={navigateHome} className="nav-home" size="xl"/>
                 </div>
             </div>
-            
+
             <div className="publish-content-wrapper">
                 <div className="publish-title-wrapper">
                     <h1 className="publish-title">Share Your Experience With Us</h1>
                 </div>
                 <div className="publish-stars-wrapper">
-                    <FontAwesomeIcon icon={faStar} size="3x" className="publish-star-1" onClick={() => setStars(1)}/>
-                    <FontAwesomeIcon icon={faStar} size="3x" className="publish-star-2" onClick={() => setStars(2)}/>
-                    <FontAwesomeIcon icon={faStar} size="3x" className="publish-star-3" onClick={() => setStars(3)}/>
-                    <FontAwesomeIcon icon={faStar} size="3x" className="publish-star-4" onClick={() => setStars(4)}/>
-                    <FontAwesomeIcon icon={faStar} size="3x" className="publish-star-5" onClick={() => setStars(5)}/>
+                    <FontAwesomeIcon icon={faStar} size="3x" className={stars === 5 ? "s1 s1a" : "s1"} onClick={() => setStars(5)}/>
+                    <FontAwesomeIcon icon={faStar} size="3x" className={stars === 4 ? "s2 s2a" : "s2"} onClick={() => setStars(4)}/>
+                    <FontAwesomeIcon icon={faStar} size="3x" className={stars === 3 ? "s3 s3a" : "s3"} onClick={() => setStars(3)}/>
+                    <FontAwesomeIcon icon={faStar} size="3x" className={stars === 2 ? "s4 s4a" : "s4"} onClick={() => setStars(2)}/>
+                    <FontAwesomeIcon icon={faStar} size="3x" className={stars === 1 ? "s5 s5a" : "s5"} onClick={() => setStars(1)}/>
                 </div>
                 <form onSubmit={handleSubmit}>
                     
