@@ -138,7 +138,7 @@ export default function Reviews () {
                 </div>
             </div>
             <div className="review-button-wrapper">
-                <button className="review-add" onClick={navigatePublish}>Add a Review</button>                
+                <button className="review-add">Add a Review</button>                
             </div>
             <div className="review-copyright-bar">
                 <p className="review-copyright-info">&copy; Jaren Worme 2024</p>

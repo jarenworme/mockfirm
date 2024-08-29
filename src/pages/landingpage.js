@@ -59,7 +59,7 @@ export default function LandingPage () {
                     <FontAwesomeIcon icon={faEnvelope} size="4x" className="lp-envelope"/>
                     <h1 className="lp-card-text">Email us Questions</h1>
                 </a>
-                <button className="lp-card" onClick={routeMoreInfo}>
+                <button className="lp-card">
                     <FontAwesomeIcon icon={faCircleInfo} size="4x" className="lp-info" />
                     <h1 className="lp-card-text">Meet the Team!</h1>
                 </button>
