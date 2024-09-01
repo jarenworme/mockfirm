@@ -35,9 +35,10 @@ export default function Reviews () {
     // function to change the review tab and regenerate the array of reviews based on the current tab
     const switchTab = (tab) => {
         // tab  is all reviews, for simplicity
-        if(tab == 6) {
+        var Addr = WEBADDRESS;
+        if(tab === 6) {
             setCurrTab(tab);
-            var Addr = WEBADDRESS + 'api/reviews/';
+            Addr += 'api/reviews/';
             axios.get(Addr)
                 .then(response => {
                     setReviewArray(response.data);
@@ -47,7 +48,7 @@ export default function Reviews () {
                 });
         } else {
             setCurrTab(tab);
-            var Addr = WEBADDRESS + 'api/reviews/' + tab + '/';
+            Addr = Addr + 'api/reviews/' + tab + '/';
             axios.get(Addr)
                 .then(response => {
                     setReviewArray(response.data);
@@ -60,7 +61,7 @@ export default function Reviews () {
 
     // logic to call switchTab depending on which arrow direction is pressed
     const switchTabArrow = (direction) => {
-        if (direction == 'r') {
+        if (direction === 'r') {
             if (currTab > 1) {
                 switchTab(currTab-1);
             }
@@ -92,7 +93,7 @@ export default function Reviews () {
             </div>
             <div className="tabs-wrapper">
                 <div className="tab-wrapper">
-                    <button onClick={() => switchTab(6)} className={`review-tab ${currTab === 6 ? 'active' : ''}`}>all</button>
+                    <button onClick={() => switchTab(6)} className={`review-tab ${currTab === 6 ? 'active' : ''}`}>All</button>
                     <div className={`review-tab-bar ${currTab === 6 ? 'activeb' : ''}`}>.</div>
                 </div>
                 <div className="tab-wrapper">
@@ -121,7 +122,7 @@ export default function Reviews () {
                     <FontAwesomeIcon icon={faArrowLeft} size="2x" className="arrow-left" onClick={() => switchTabArrow('l')}/>
                 </div>
                 <div className="reviews-container">
-                    {reviewArray.length == 0 ?
+                    {reviewArray.length === 0 ?
                     <div>
                         <h2>currently no {currTab}-star reviews.</h2>
                     </div>

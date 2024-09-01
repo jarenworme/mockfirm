@@ -1,10 +1,10 @@
-import { replace, useNavigate } from "react-router-dom";
-import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import React, { useState } from "react";
 import axios from "axios";
 import '../styles/publish.css';   
 import '../styles/nav.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowLeft, faArrowRight, faHouse, faStar } from "@fortawesome/free-solid-svg-icons";
+import { faHouse, faStar } from "@fortawesome/free-solid-svg-icons";
 import WEBADDRESS from "../webAddress";
 
 export default function PublishReview () {
@@ -32,7 +32,7 @@ export default function PublishReview () {
         try {
             let tempdate = new Date();
             let dateISO = tempdate.toISOString();
-            const response = await axios.post(`${WEBADDRESS}api/publish/`, {
+            await axios.post(`${WEBADDRESS}api/publish/`, {
                 stars: stars,
                 reviewer: reviewer,
                 content: reviewBody,
@@ -81,7 +81,7 @@ export default function PublishReview () {
                     </div>
                     <div className="publish-buttons-wrapper">
                         <button type="button" className="publish-cancel" onClick={handleCancel}>Cancel</button>
-                        <button type="submit" className="publish-submit" disabled={stars < 1 || reviewer == '' || reviewBody == ''}>Submit</button>
+                        <button type="submit" className="publish-submit" disabled={stars < 1 || reviewer === '' || reviewBody === ''}>Submit</button>
                     </div>
                 </form>
             </div>

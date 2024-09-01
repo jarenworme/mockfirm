@@ -97,7 +97,7 @@
     justify-content: space-evenly;
 }
 
-.lp-card, .lp-review-card {
+.lp-card, .lp-info-card, .lp-review-card {
     border: none;
     border-radius: 16px;
     background-color: var(--jwe-titanium-white);
@@ -111,10 +111,14 @@
     color: var(--jwe-black);
 }
 
-.lp-card:hover, .lp-review-card:hover {
+.lp-card:hover, .lp-info-card:hover, .lp-review-card:hover {
     box-shadow: 5px 5px var(--jwe-saffron);
     cursor: pointer;
     transition: box-shadow 0.5s ease;
+}
+
+.lp-info-card:hover {
+    cursor: not-allowed;
 }
 
 .lp-review-card {
