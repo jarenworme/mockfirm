@@ -5,7 +5,13 @@
     --jwe-black-light: #555555;
     --jwe-lilac: #DEDBFF;
     --jwe-secondary: #F63871;
+    --jwe-secondary-light: #F56490;
+    --jwe-secondary-disbled: #F2C2D0;
     --jwe-off-white: #FAFAFA;
+}
+
+* {
+    font-family: sans-serif;
 }
 
 .publish-wrapper {
@@ -20,19 +26,25 @@
 }
 
 .publish-title-wrapper {
-    background-color: #FFE601;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .publish-title {
     margin: 0;
+    font-size: 250%;
 }
 
 .publish-stars-wrapper {
     display: flex;
     flex-direction: row-reverse;
-    background-color: #555555;
+    align-items: center;
     justify-content: center;
+    height: 12vh;
 }
+
 
 .s1:hover, .s1:hover + .s2, .s1:hover ~ .s3, .s1:hover ~ .s4, .s1:hover ~ .s5 {
     color: var(--jwe-saffron);
@@ -82,4 +94,84 @@
 .s5a {
     color: var(--jwe-saffron);
     cursor: pointer;
+}
+
+.publish-reviewer-wrapper {
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.publish-reviewer-input {
+    border-radius: 8px;
+    height: 7vh;
+    border: none;
+    width: 70vw;
+    font-size: larger;
+    padding-left: 3%;
+    box-sizing: border-box;
+}
+
+.publish-review-body-wrapper {
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.publish-review-body-input {
+    border-radius: 8px;
+    height: 38vh;
+    width: 70vw;
+    border: none;
+    font-size: larger;
+    padding: 3%;
+    line-height: 1;
+    box-sizing: border-box;
+    
+}
+
+.publish-buttons-wrapper {
+    height: 18vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.publish-cancel, .publish-submit {
+    border: none;
+    height: 10vh;
+    border-radius: 8px;
+    width: 25vw;
+    font-size: larger;
+    color: var(--jwe-titanium-white);
+}
+
+.publish-cancel {
+    margin-right: 20vw;
+    background-color: var(--jwe-black);
+}
+
+.publish-submit {
+    border: none;
+    margin-right: 15vw;
+    background-color: var(--jwe-secondary);
+}
+
+.publish-cancel:hover {
+    background-color: var(--jwe-black-light);
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.publish-submit:hover {
+    background-color: var(--jwe-secondary-light);
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+.publish-submit:disabled {
+    background-color: var(--jwe-secondary-disbled);
+    cursor: not-allowed;
 }

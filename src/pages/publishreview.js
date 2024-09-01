@@ -14,7 +14,6 @@ export default function PublishReview () {
 
     // set up state variable to hold user-entered number of review stars
     const [stars, setStars] = useState(0);
-    const [starsError, setStarsError] = useState('');
 
     // set up state variable to hold user-entered name in the reviewer section
     const [reviewer, setReviewer] = useState('');
@@ -66,11 +65,11 @@ export default function PublishReview () {
                     <h1 className="publish-title">Share Your Experience With Us</h1>
                 </div>
                 <div className="publish-stars-wrapper">
-                    <FontAwesomeIcon icon={faStar} size="3x" className={stars === 5 ? "s1 s1a" : "s1"} onClick={() => setStars(5)}/>
-                    <FontAwesomeIcon icon={faStar} size="3x" className={stars === 4 ? "s2 s2a" : "s2"} onClick={() => setStars(4)}/>
-                    <FontAwesomeIcon icon={faStar} size="3x" className={stars === 3 ? "s3 s3a" : "s3"} onClick={() => setStars(3)}/>
-                    <FontAwesomeIcon icon={faStar} size="3x" className={stars === 2 ? "s4 s4a" : "s4"} onClick={() => setStars(2)}/>
-                    <FontAwesomeIcon icon={faStar} size="3x" className={stars === 1 ? "s5 s5a" : "s5"} onClick={() => setStars(1)}/>
+                    <FontAwesomeIcon icon={faStar} size="4x" className={stars === 5 ? "s1 s1a" : "s1"} onClick={() => setStars(5)}/>
+                    <FontAwesomeIcon icon={faStar} size="4x" className={stars === 4 ? "s2 s2a" : "s2"} onClick={() => setStars(4)}/>
+                    <FontAwesomeIcon icon={faStar} size="4x" className={stars === 3 ? "s3 s3a" : "s3"} onClick={() => setStars(3)}/>
+                    <FontAwesomeIcon icon={faStar} size="4x" className={stars === 2 ? "s4 s4a" : "s4"} onClick={() => setStars(2)}/>
+                    <FontAwesomeIcon icon={faStar} size="4x" className={stars === 1 ? "s5 s5a" : "s5"} onClick={() => setStars(1)}/>
                 </div>
                 <form onSubmit={handleSubmit}>
                     
@@ -78,11 +77,11 @@ export default function PublishReview () {
                         <input className="publish-reviewer-input" type="text" placeholder="Type your name here" value={reviewer} onChange={(e) => setReviewer(e.target.value)} />
                     </div>
                     <div className="publish-review-body-wrapper">
-                        <input className="publish-review-body-input" type="text" placeholder="Give us your honest review!" value={reviewBody} onChange={(e) => setReviewBody(e.target.value)} />
+                        <textarea className="publish-review-body-input" type="text" placeholder="Give us your honest review!" value={reviewBody} onChange={(e) => setReviewBody(e.target.value)} />
                     </div>
                     <div className="publish-buttons-wrapper">
                         <button type="button" className="publish-cancel" onClick={handleCancel}>Cancel</button>
-                        <button type="submit" className="publish-submit" disabled={stars < 1}>Submit</button>
+                        <button type="submit" className="publish-submit" disabled={stars < 1 || reviewer == '' || reviewBody == ''}>Submit</button>
                     </div>
                 </form>
             </div>
