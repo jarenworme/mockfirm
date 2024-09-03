@@ -148,10 +148,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #F63871;
 }
 
 .review-content {
     margin: 0;
+    max-height: 90%;
+    background-color: #DEDBFF;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
 }
 
 .review-reviewer-wrapper {
