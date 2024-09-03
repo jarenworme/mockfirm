@@ -5,11 +5,103 @@
     --jwe-black-light: #555555;
     --jwe-lilac: #DEDBFF;
     --jwe-secondary: #F63871;
+    --jwe-secondary-light: #F56490;
+    --jwe-secondary-disbled: #F2C2D0;
     --jwe-off-white: #FAFAFA;
 }
 
 .lp-wrapper {
     background-color: var(--jwe-lilac);
+}
+
+.modal-wrapper {
+    width: 70vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-title {
+    margin: 3% 0 0 0;
+    height: 12%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-subtitle {
+    height: 20%;
+    margin: 0;
+    text-align: center;
+    font-size: medium;
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-form-title {
+    height: 10%;
+    margin: 5% 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-form {
+    height: 48%;
+    margin-bottom: 2%;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.modal-input-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 30%;
+}
+
+.modal-input-select, .modal-input {
+    width: 30%;
+    border-radius: 8px;
+    border: 1px solid var(--jwe-black-light);
+    padding: 0;
+    height: 100%;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+.modal-input { 
+    padding-left: 1%;
+}
+
+.modal-submit {
+    background-color: var(--jwe-black);
+    border: none;
+    border-radius: 8px;
+    height: 32%;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    width: 50%;
+    font-size: large;
+    color: var(--jwe-titanium-white);
+}
+
+.modal-submit:hover {
+    box-shadow: none;
+    cursor: pointer;
+    background-color: var(--jwe-black-light)
+}
+
+.modal-submit:disabled {
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    background-color: #BBBBBB;
+    cursor: not-allowed;
 }
 
 .lp-top-container {

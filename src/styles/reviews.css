@@ -5,6 +5,8 @@
     --jwe-black-light: #555555;
     --jwe-lilac: #DEDBFF;
     --jwe-secondary: #F63871;
+    --jwe-secondary-light: #F56490;
+    --jwe-secondary-disbled: #F2C2D0;
     --jwe-off-white: #FAFAFA;
 }
 
@@ -148,13 +150,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F63871;
 }
 
 .review-content {
     margin: 0;
     max-height: 90%;
-    background-color: #DEDBFF;
     overflow: hidden;
     display: -webkit-box;
     -webkit-box-orient: vertical;
