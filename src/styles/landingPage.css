@@ -8,6 +8,7 @@
     --jwe-secondary-light: #F56490;
     --jwe-secondary-disbled: #F2C2D0;
     --jwe-off-white: #FAFAFA;
+    ---jwe-blue: #36b5ff;
 }
 
 .lp-wrapper {
@@ -167,9 +168,75 @@
 }
 
 .lp-top-right-wrapper {
+    color: transparent;
     box-sizing: border-box;
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
+
+.lp-picture-wrapper {
+    background-image: url(/public/IMG_0687.jpg);
+    background-position: center;
+    background-size: cover;
+    border: none;
+    height: 88%;
+    width: 85%;
+    position: relative;
+    border: 6px solid var(--jwe-saffron);
+    border-radius: 16px;
+}
+
+.lp-picture-card-left, .lp-picture-card-right {
+    border-radius: 8px;
+    position: absolute;
+    width: fit-content;
+    height: 20%;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+    background-color: var(--jwe-titanium-white);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.lp-picture-card-left {
+    left: -5%;
+    bottom: 10%;
+}
+
+.lp-picture-card-right {
+    right: -5%;
+    top: 10%;
+}
+
+.lp-picture-card-left-title, .lp-picture-card-right-title {
+    margin: 0;
+    font-size: 240%;
+    margin-left: 5%;
+}
+
+.lp-picture-card-right-title {
+    color: var(--jwe-secondary);
+}
+
+.lp-picture-card-left-title {
+    color: var(---jwe-blue);
+}
+
+.lp-picture-card-text  {
+    color: var(--jwe-black);
+    font-size: larger;
+    margin: 0;
+    width: 130px;
+    background-color: #BBBBBB;
+}
+
+
+
+
 
 
 .lp-spacer {

@@ -116,7 +116,19 @@ export default function LandingPage () {
                     </div>
                     <button className="lp-book-button" onClick={() => toggleModal(true)}>Book a Free Consultation</button>
                 </div>
-                <div className="lp-top-right-wrapper">.</div>
+                <div className="lp-top-right-wrapper">
+                    <div className="lp-picture-wrapper">
+                        <div className="lp-picture-card-right">
+                            <h2 className="lp-picture-card-right-title">80</h2>
+                            <p className="lp-picture-card-text">Satisfied Customers</p>
+                        </div>
+                        <div className="lp-picture-card-left">
+                            <h2 className="lp-picture-card-left-title">6+</h2>
+                            <p className="lp-picture-card-text">Years Work Experience</p>
+                        </div> 
+                    </div>
+                    
+                </div>
             </div>
             <div className="lp-spacer">.</div>
             <div className="lp-bottom-container">
