@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/mockfirm/static/css/main.fbfbb31c.css",
+    "main.css": "/mockfirm/static/css/main.723299d8.css",
     "main.js": "/mockfirm/static/js/main.9688789f.js",
     "static/js/453.64166b16.chunk.js": "/mockfirm/static/js/453.64166b16.chunk.js",
     "static/media/IMG_0687.jpg": "/mockfirm/static/media/IMG_0687.36c30cf7f3c00489921c.jpg",
     "index.html": "/mockfirm/index.html",
-    "main.fbfbb31c.css.map": "/mockfirm/static/css/main.fbfbb31c.css.map",
+    "main.723299d8.css.map": "/mockfirm/static/css/main.723299d8.css.map",
     "main.9688789f.js.map": "/mockfirm/static/js/main.9688789f.js.map",
     "453.64166b16.chunk.js.map": "/mockfirm/static/js/453.64166b16.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fbfbb31c.css",
+    "static/css/main.723299d8.css",
     "static/js/main.9688789f.js"
   ]
 }
